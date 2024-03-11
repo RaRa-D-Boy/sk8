@@ -18,16 +18,114 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+.bg-card {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden; /* Ensure the pseudo-element is clipped to the card's bounds */
+ }
+ 
+ .bg-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../public/images/sk8-8.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.5s ease; /* Smooth transition for the hover effect */
+  z-index: -1; /* Ensure the image is behind the content */
+ }
+ 
+ .bg-card:hover::before {
+  transform: scale(1.1); /* Scale the image out on hover */
+ }
+
+ .bg-purchase{
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden; /* Ensure the pseudo-element is clipped to the card's bounds */
+ }
+ 
+ .bg-purchase::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../public/buy.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.5s ease; /* Smooth transition for the hover effect */
+  z-index: -1; /* Ensure the image is behind the content */
+ }
+ 
+ .bg-purchase:hover::before {
+  transform: scale(1.1); /* Scale the image out on hover */
+ }
+
+ .bg-learn{
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden; /* Ensure the pseudo-element is clipped to the card's bounds */
+ }
+ 
+ .bg-learn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../public/buy1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.5s ease; /* Smooth transition for the hover effect */
+  z-index: -1; /* Ensure the image is behind the content */
+ }
+ 
+ .bg-learn:hover::before {
+  transform: scale(1.1); /* Scale the image out on hover */
+ }
+
+ 
+
+
+
+.bg-card2 {
+  background-image: url("../../public/sk8-7.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 600px;
+}
+
+.bg-sataday {
+  background-image: url("../../public/sk8-3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 250px;
 }

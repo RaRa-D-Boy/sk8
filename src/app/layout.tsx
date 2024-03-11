@@ -1,8 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
+import '@radix-ui/themes/styles.css';
 
-const inter = Inter({ subsets: ["latin"] });
+
+
+const poppins = Poppins({
+  weight: ["400", "900"], // Specify the font weights you want to include
+  display: "swap", // Specify the font-display property
+  subsets: ["latin"], // Include the "latin" subset
+  variable: "--poppins-font", // Define a CSS variable for the font
+ });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={poppins.className}>
+          {children}
+      </body>
     </html>
   );
 }
