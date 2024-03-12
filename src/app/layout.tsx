@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Poppins, Vibes } from "next/font/google";
 import "./globals.css";
 import '@radix-ui/themes/styles.css';
 
+const vibes = Vibes({
+  weight: ["400"], // Specify the font weights you want to include
+  display: "swap", // Specify the font-display property
+  subsets: ["latin"], // Include the "latin" subset
+  variable: "--vibes-font", // Define a CSS variable for the font
+ });
 
 
 const poppins = Poppins({
@@ -11,6 +17,7 @@ const poppins = Poppins({
   subsets: ["latin"], // Include the "latin" subset
   variable: "--poppins-font", // Define a CSS variable for the font
  });
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={`${poppins.className} ${vibes.className}`}>
           {children}
       </body>
     </html>
