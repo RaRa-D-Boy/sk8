@@ -1,18 +1,18 @@
 "use client"
 import { Box, Container, Grid, } from '@radix-ui/themes';
-import SK8 from '../../../public/sk8-9.png'
+import SK8 from '../../public/sk8-9.png'
 import React from 'react';
 import Image from 'next/image';
 
 const Home = () => {
     return (
         <main>
-            <Container className="mx-8 my-2 md:mx-8 md:my-6 xl:mx-56 xl:my-6">
+            <Container className="mx-8 my-2 md:mx-8 md:my-6 xl:mx-24 xl:my-6 poppins">
                 <Grid columns={{ initial: '1', md: '2' }} className="gap-3" width="auto" align="stretch">
                     <Box>
                         <Box className="bg-card rounded-2xl relative ">
                             <div className="absolute bottom-0 p-6">
-                                <div className="poppins text-3xl " >
+                                <div className="poppins text-3xl text-white " >
                                     Collude Everywhere
                                 </div>
                                 <div>
@@ -73,14 +73,14 @@ const Home = () => {
                     </Box>
                     <Box className="relative bg-white rounded-2xl">
                         <Box className="bg-card2 rounded-2xl relative grid place-items-center">
-                            <div className="absolute p-6">
-                                <div className='text-sm font-semibold my-12'>Group Together</div>
+                            <div className="absolute p-6 text-white">
+                                <div className='text-sm font-normal my-12'>Group Together</div>
                                 <div className="poppins text-6xl">
                                     Carry Your
                                     <br></br> Group Together
                                     <br></br> Right Here
                                 </div>
-                                <div className='my-12 text-sm font-semibold'>
+                                <div className='my-12 text-sm font-normal'>
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
                                 </div>
                             </div>
