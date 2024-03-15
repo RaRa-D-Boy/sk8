@@ -42,7 +42,7 @@ const Home = () => {
                 {/* <Image src={SK8} alt="SK8" className="object-fit w-[800px] h-full" /> */}
               </div>
             </Box>
-            <Box>
+            <Box >
               <Grid columns={{ initial: '2', md: '2' }} className="gap-3" width="auto" align="stretch">
                 <Box className="bg-purchase  poppins rounded-2xl relative">
                   {/* Overlay */}
@@ -77,11 +77,11 @@ const Home = () => {
               </Grid>
             </Box>
           </Box>
-          <Box className="relative bg-white  rounded-2xl">
-            <Box className="bg-card2 rounded-2xl  relative grid place-items-center">
+          <Box className="relative  bg-transparent  md:bg-white rounded-2xl">
+            <Box className="bg-card2 h-[600px] md:h-[600px] lg:h-[400px] xl:h-[600px] rounded-2xl  relative grid place-items-center">
               <div className="absolute px-6 md:px-6 text-white">
                 <div className='text-sm font-normal my-12'>Group Together</div>
-                <div className="poppins text-6xl">
+                <div className="poppins text-5xl lg:text-2xl xl:text-6xl">
                   Carry Your
                   <br></br> Group Together
                   <br></br> Right Here
@@ -91,39 +91,15 @@ const Home = () => {
                 </div>
               </div>
             </Box>
-            <Box className="absolute  py-3  w-full rounded-2xl">
-              <Grid columns={{ initial: '2', md: '2' }} className="gap-3 lg:p-4 p-0  bg-transparent" width="auto" align="stretch">
-              <Box className="bg-sataday1 rounded-2xl relative">
-                  {/* Overlay */}
-                  {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-90"></div> */}
-                  <div className=" bottom-0 p-6 z-10"> {/* Adjusted z-index */}
-                    <div className="text-white font-medium text-xs my-3">
-                      Purchase all your skating equipment here.
-                      Skate shoes, helmets, boards all at affordable prices.
-                    </div>
-                    <div>
-                      <button className="rounded-3xl text-xs glass-btn text-white py-2 px-4 ">
-                        Join us.
-                      </button>
-                    </div>
-                  </div>
+            <Box className=" bg-white  p-0 m-0 w-full rounded-2xl absolute mt-[10px] md:relative lg:absolute lg:bottom-0  lg:z-10  lg:mt-0">
+              <Grid columns={{ initial: '1', xs:'2', md: '1' , lg:'2' }} className="gap-3  p-0 md:p-4   bg-transparent" width="auto" align="stretch">
+              {/* <div className="poppins text-black text-6xl">
+                  Carry Your  Group Together  Right Here
+                </div> */}
+                
+                <Box className="ultimate rounded-2xl h-[300px]">          
                 </Box>
-                <Box className="bg-sataday1 rounded-2xl relative">
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-90"></div>
-                  <div className="absolute bottom-0 p-6 z-10"> {/* Adjusted z-index */}
-                    <div className="text-white font-medium text-xs my-3">
-                      Purchase all your skating equipment here.
-                      Skate shoes, helmets, boards all at affordable prices.
-                    </div>
-                    <div>
-                      <button className="rounded-3xl text-xs glass-btn text-white py-2 px-4 ">
-                        Join us.
-                      </button>
-                    </div>
-                  </div>
-                </Box>
-                {/* <Box className="bg-white p-8 rounded-2xl">
+                <Box className="bg-white  p-8 rounded-2xl">
                   <div className='text-black text-[12px] p-3'>
                     Join us every Saturday for a fun and inclusive skating session open to  all ages and skill levels! Whether you're a beginner looking to learn  the basics or an experienced skater wanting to practice and teach, our  open skating sessions are the perfect opportunity to enjoy the sport and  connect with the community.
                   </div>
@@ -132,7 +108,7 @@ const Home = () => {
                       Learn more.
                     </button>
                   </div>
-                </Box> */}
+                </Box>
               </Grid>
             </Box>
 
