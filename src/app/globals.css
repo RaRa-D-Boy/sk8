@@ -21,7 +21,12 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: black;
+  background-image: url('../../public/bgbg9.png');
+  background-position: center;
+  width:100%;
+  height:auto;
+  background-size: cover;
+  background-repeat: no-repeat;
   font-family: "Poppins",sans-serif;
   font-style: normal;
 
@@ -237,9 +242,26 @@ body {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 13px; 
-  backdrop-filter: blur(30px); 
+  backdrop-filter: blur(10px); 
   transition: background 0.3s ease; 
-  box-shadow: 5px 5px 7px rgba(85, 83, 83, 0.164);  
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.164);  
+}
+
+.glass-card2{
+  background: rgba(29, 29, 29, 0.432); 
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  /* text-align: center; */
+  text-decoration: none;
+  /* display: inline-block; */
+  font-size: 10px;
+  
+  cursor: pointer;
+  border-radius: 13px; 
+  backdrop-filter: blur(10px); 
+  transition: background 0.3s ease; 
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.164);  
 }
 
 .glass-card1{

@@ -43,7 +43,7 @@ const Home = () => {
               </div>
             </Box>
             <Box >
-              <Grid columns={{ initial: '2', md: '2' }} className="gap-3" width="auto" align="stretch">
+              <Grid columns={{ initial: '1', sm:'2',  md: '2' }} className="gap-3" width="auto" align="stretch">
                 <Box className="bg-purchase  poppins rounded-2xl relative">
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-90"></div>
@@ -91,8 +91,8 @@ const Home = () => {
                 </div>
               </div>
             </Box>
-            <Box className=" bg-white  p-0 m-0 w-full rounded-2xl absolute mt-[10px] md:relative lg:absolute lg:bottom-0  lg:z-10  lg:mt-0">
-              <Grid columns={{ initial: '1', xs:'2', md: '1' , lg:'2' }} className="gap-3  p-0 md:p-4   bg-transparent" width="auto" align="stretch">
+            <Box className=" bg-white  p-0 m-0 w-full  sm:mt-3 rounded-2xl absolute mt-3 md:relative lg:absolute lg:bottom-0  lg:z-10  lg:mt-0">
+              <Grid columns={{ initial: '1', xs:'1',sm:'2', md: '1' , lg:'2' }} className="gap-3 p-0  md:p-4   bg-transparent" width="auto" align="stretch">
               {/* <div className="poppins text-black text-6xl">
                   Carry Your  Group Together  Right Here
                 </div> */}

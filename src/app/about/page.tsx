@@ -18,8 +18,8 @@ const About = () => {
                             <div className="text-4xl my-4">Join Us</div>
                         </div>
                     </Box>
-                    <Box className=" col-span-4 glass-card rounded-2xl p-6">
-                        <Grid columns={{ initial: '1', md: '2' }} className="gap-6 p-6 bg-transparent rounded-2xl" width="auto" align="stretch">
+                    <Box className=" col-span-4 bg-transparent  rounded-2xl p-6">
+                        <Grid columns={{ initial: '1', md: '2' }} className="gap-6  glass-card  rounded-2xl" width="auto" align="stretch">
                             <Box className="bg-about rounded-2xl">
                             </Box>
                             <Box className=" rounded-2xl ">
