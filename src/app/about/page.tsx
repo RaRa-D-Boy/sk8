@@ -1,15 +1,13 @@
 "use client"
 import { Box, Container, Grid, } from '@radix-ui/themes';
-import SK8 from '../../../public/sk8-9.png'
 import React from 'react';
-import Image from 'next/image';
 
 const About = () => {
     return (
         <main>
             <Container className="mx-4 my-2 md:mx-12 vibes md:my-6 xl:mx-28 xl:my-6 poppins">
                 <div className="gap-3  grid grid-cols-6" >
-                    <Box className="h-[90vh] col-span-2 relative">
+                    <Box className="h-[90vh] col-span-6 xl:col-span-2 relative">
                         <div>arrow</div>
                         <div>logo</div>
                         <div className="absolute bottom-0 p-6">
@@ -18,7 +16,7 @@ const About = () => {
                             <div className="text-4xl my-4">Join Us</div>
                         </div>
                     </Box>
-                    <Box className=" col-span-4 bg-transparent  rounded-2xl p-6">
+                    <Box className=" col:col-span-6 xl:col-span-4 bg-transparent  rounded-2xl p-6">
                         <Grid columns={{ initial: '1', md: '2' }} className="gap-6  glass-card  rounded-2xl" width="auto" align="stretch">
                             <Box className="bg-about rounded-2xl">
                             </Box>

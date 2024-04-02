@@ -21,12 +21,13 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-image: url('../../public/bgbg9.png');
-  background-position: center;
-  width:100%;
-  height:auto;
-  background-size: cover;
-  background-repeat: no-repeat;
+  /* background-image: url('../../public/bgbg9.png');
+  background-position: center; */
+  /* width:100%;
+  height:auto; */
+  /* background-size: cover;
+  background-repeat: no-repeat; */
+  background:black;
   font-family: "Poppins",sans-serif;
   font-style: normal;
 
