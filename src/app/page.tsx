@@ -110,6 +110,7 @@ const Home = () => {
               <div className="absolute px-6 md:px-6 text-white">
                 <div className='text-sm font-normal my-12'>Group Together</div>
                 <div className="poppins text-5xl lg:text-2xl xl:text-6xl">
+                <div className="poppins text-5xl lg:text-2xl xl:text-6xl">
                   Carry Your
                   <br></br> Group Together
                   <br></br> Right Here
@@ -128,6 +129,7 @@ const Home = () => {
                 <Box className="ultimate rounded-2xl h-[300px]">
                 </Box>
                 <Box className="bg-white  p-8 rounded-2xl">
+                <Box className="bg-white  p-8 rounded-2xl">
                   <div className='text-black text-[12px] p-3'>
                     Join us every Saturday for a fun and inclusive skating session open to  all ages and skill levels! Whether you're a beginner looking to learn  the basics or an experienced skater wanting to practice and teach, our  open skating sessions are the perfect opportunity to enjoy the sport and  connect with the community.
                   </div>
@@ -136,6 +138,7 @@ const Home = () => {
                       Learn more.
                     </button>
                   </div>
+                </Box>
                 </Box>
               </Grid>
             </Box>
