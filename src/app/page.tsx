@@ -1,42 +1,25 @@
 "use client"
 import { Box, Container, Grid, } from '@radix-ui/themes';
 import React from 'react';
-import Image from 'next/image';
-// import Vid from '../../public/home-vid.mp4'
+import FloatingButton from './components/floatingBtn';
 
 const Home = () => {
   return (
-    <main>
-      <Container className="mx-4 my-2 md:mx-12 vibes md:my-6 xl:mx-28 xl:my-6 poppins">
+    <main className="glass-card">
+      <Container className="mx-4 my-2 md:mx-8 lg:mx-28 vibes md:my-6 xl:mx-28 xl:my-6 poppins">
         <Grid columns={{ initial: '1', md: '2' }} className="gap-3" width="auto" align="stretch">
           <Box>
-            {/* <Box className="bg-card shadow-2xl rounded-2xl relative ">
-            <div className="absolute  text-4xl top-0 p-6">
-              sk8
-              </div>
-              <div className="absolute bottom-0 p-6">
-                <div className="poppins logo text-3xl text-white " >
-                  Collude Everywhere
-                </div>
-                <div>
-                  <button className="rounded-3xl poppins text-xs glass-btn backdrop-blur-xl text-white py-2 px-4 ">
-                    Sign up
-                  </button>
-                </div>
-              </div>
-            </Box> */}
             <div className="video-container rounded-2xl">
               <video autoPlay loop muted className="video-background">
                 <source src="/home-vid3.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               <div className="content flex flex-col justify-between  h-full ">
-                {/* <div className="logo absolute top-0 left-0 poppins logo text-3xl bg-white rounded-full text-black py-6 px-5 m-6">sk8</div> */}
                 <div className=" absolute bottom-0 left-0 p-6 w-full">
                   <Box className="flex justify-between items-center">
                     <div>
-                      <div className="poppins logo text-3xl text-white">
-                        Collude Everywhere
+                      <div className="poppins logo text-3xl mb-2 text-white">
+                        We Are Everywhere Chale !
                       </div>
                       <div>
                         <button className="rounded-3xl poppins text-xs glass-btn backdrop-blur-xl text-white py-2 px-4">
@@ -66,11 +49,10 @@ const Home = () => {
 
               </div>
               <div>
-                {/* <Image src={SK8} alt="SK8" className="object-fit w-[800px] h-full" /> */}
               </div>
             </Box>
             <Box >
-              <Grid columns={{ initial: '1', sm: '2', md: '2' }} className="gap-3" width="auto" align="stretch">
+              <Grid columns={{ initial: '1', xs: '2', md: '2' , lg:'2' }} className="gap-3" width="auto" align="stretch">
                 <Box className="bg-purchase  poppins rounded-2xl relative">
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-90"></div>
@@ -105,7 +87,7 @@ const Home = () => {
             </Box>
           </Box>
           <Box className="relative  bg-transparent shadow-2xl  md:bg-white rounded-2xl">
-            <Box className="bg-card2 h-[600px] md:h-[600px] lg:h-[400px] xl:h-[600px] rounded-2xl  relative grid place-items-center">
+            <Box className="bg-card2 h-[600px] md:h-[400px] lg:h-[400px] xl:h-[600px] rounded-2xl  relative grid place-items-center">
               <div className="absolute px-6 md:px-6 text-white">
                 <div className='text-sm font-normal my-12'>Group Together</div>
                 <div className="poppins text-5xl lg:text-2xl xl:text-6xl">
@@ -121,14 +103,10 @@ const Home = () => {
               </div>
             </Box>
             <Box className=" bg-white  p-0 m-0 w-full  sm:mt-3 rounded-2xl absolute mt-3 md:relative lg:absolute lg:bottom-0  lg:z-10  lg:mt-0">
-              <Grid columns={{ initial: '1', xs: '1', sm: '2', md: '1', lg: '2' }} className="gap-3 p-0  md:p-4   bg-transparent" width="auto" align="stretch">
-                {/* <div className="poppins text-black text-6xl">
-                  Carry Your  Group Together  Right Here
-                </div> */}
-
+              <Grid columns={{ initial: '1', xs: '1', sm: '2', md: '1', lg: '2', xl:'2' }} className="gap-3 p-0  md:p-4  shadow-2xl md:shadow-none mb-4 rounded-2xl bg-transparent" width="auto" align="center">
                 <Box className="ultimate rounded-2xl h-[300px]">
                 </Box>
-                <Box className="bg-white  p-8 rounded-2xl">
+                <Box className="bg-white  md:p-8 lg:p-2  rounded-2xl">
                   <Box className="bg-white  p-2 rounded-2xl">
                     <div className='text-black text-[12px] p-3'>
                       Join us every Saturday for a fun and inclusive skating session open to  all ages and skill levels! Whether you're a beginner looking to learn  the basics or an experienced skater wanting to practice and teach, our  open skating sessions are the perfect opportunity to enjoy the sport and  connect with the community.
@@ -142,9 +120,9 @@ const Home = () => {
                 </Box>
               </Grid>
             </Box>
-
           </Box>
         </Grid>
+        <FloatingButton/>
       </Container>
     </main>
   )

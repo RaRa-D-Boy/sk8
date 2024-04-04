@@ -1,8 +1,13 @@
 import React from 'react';
+import { SK88} from '../../../../public/images';
+import Image from 'next/image';
 
 const ProEvent = () => {
     return (
         <div className="text-black px-6 py-4 text-[15px] h-[auto] lg:h-[700px] overflow-scroll">
+            <div  className="block md:hidden">
+                <Image src={SK88} alt="img" className="w-full h-[450px] rounded-2xl"/>
+            </div>
             <h1  className="p-3">Join Us for Thrilling Skating Adventures at Our Monthly Pro Event!</h1>
             <p className="p-3">Calling all skaters, enthusiasts, and adrenaline-seekers! Get ready for an unforgettable experience as SK8 invites you to our monthly Pro Event, held every last Saturday of the month. Prepare to be dazzled by an array of exhilarating skating competitions, challenges, and showcases that will push the boundaries of what's possible on wheels.</p>
 

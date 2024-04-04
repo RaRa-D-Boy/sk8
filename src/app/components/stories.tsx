@@ -218,12 +218,12 @@ const VideoStories = ({ videos }: { videos: string[] }) => {
         }
     }, [currentVideoIndex, videos, playbackCompleted]);
 
-    const activeColor = playbackCompleted ? "bg-black" : "bg-white";
+    const activeColor = playbackCompleted ? "bg-black" : "bg-green-200";
 
     return (
         <main>
             <Box>
-                <div className="pages-video-container rounded-2xl shadow-2xl">
+                <div className="pages-video-container xl:rounded-2xl shadow-2xl h-screen">
                     <video
                         autoPlay
                         muted

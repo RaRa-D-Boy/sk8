@@ -5,4 +5,5 @@
 // export {default as SK85} from '/sk8-5.png'
 // export {default as SK86} from '/sk8-6.png'
 // export {default as SK87} from '/sk8-7.png'
-export {default as SK88} from '/sk8-8.png'
+export {default as SK88} from './/sk8-5.jpg'
+export {default as SK8t} from './/sket1.gif'

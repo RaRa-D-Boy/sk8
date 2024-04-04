@@ -1,4 +1,3 @@
-import { Tabs, Box, Text } from '@radix-ui/themes';
 import React, { useEffect, useState } from 'react';
 import { Aboutus } from './aboutus';
 import VideoStories from '../stories';
@@ -9,7 +8,6 @@ export const KnowUs = () => {
     const [activeTab, setActiveTab] = useState('tab1');
 
     useEffect(() => {
-        // Initialize the first tab
         showTab('tab2');
     }, []);
 
@@ -19,7 +17,7 @@ export const KnowUs = () => {
 
     const tabStyles = {
         active: {
-            background: "rgba(255, 253, 253, 0.541)",
+            background: "black",
             border: "none",
             color: "white",
 
@@ -32,14 +30,14 @@ export const KnowUs = () => {
         inactive: {
             backgroundColor: 'transparent',
             border: 'none',
-            color: 'white',
+            color: 'black',
         },
     };
     return (
         <>
             <div className="w-full  text-black">
                 {/* Tab Buttons */}
-                <div className="nav-bg shadow-2xl p-4 xs:rounded-2xl lg:rounded-t-2xl ">
+                <div className="bg-white  p-4   ">
                     <div className="flex justify-start space-x-4 ">
                         <button
                             className={`px-4 py-2 text-white font-normal xs:block md:hidden hover:bg-white hover:text-black hover:rounded-2xl focus:outline-none tab-button ${activeTab === 'tab1' ? 'active' : ''}`}
