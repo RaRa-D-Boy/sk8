@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Aboutus } from './aboutus';
 import VideoStories from '../stories';
 import ProEvent from './proEvent';
+import JoinUs from './joinus';
+
 
 export const KnowUs = () => {
     const stories = ["/home-vid3.mp4", "/home-vid2.mp4", "/home-vid3.mp4"]
@@ -17,15 +19,24 @@ export const KnowUs = () => {
 
     const tabStyles = {
         active: {
-            background: "black",
+            // background: "black",
+            // border: "none",
+            // color: "white",
+
+            // textDecoration: "none",
+            // cursor: "pointer",
+            // borderRadius: "13px",
+            // backdropFilter: "blur(5px)",
+            // transition: "background 0.3s ease",
+            background: "rgba(29, 29, 29, 0.182)",
             border: "none",
             color: "white",
-
             textDecoration: "none",
             cursor: "pointer",
             borderRadius: "13px",
-            backdropFilter: "blur(5px)",
+            backdropFilter: "blur(10px)",
             transition: "background 0.3s ease",
+            boxShadow: "5px 5px 7px rgba(0, 0, 0, 0.164)"
         },
         inactive: {
             backgroundColor: 'transparent',
@@ -37,7 +48,7 @@ export const KnowUs = () => {
         <>
             <div className="w-full  text-black">
                 {/* Tab Buttons */}
-                <div className="bg-white  p-4   ">
+                <div className="bg-white  p-4 xl:rounded-2xl  ">
                     <div className="flex justify-start space-x-4 ">
                         <button
                             className={`px-4 py-2 text-white font-normal xs:block md:hidden hover:bg-white hover:text-black hover:rounded-2xl focus:outline-none tab-button ${activeTab === 'tab1' ? 'active' : ''}`}
@@ -78,13 +89,10 @@ export const KnowUs = () => {
                     <Aboutus />
                 </div>
                 <div id="tab3" className={`p-4 tab-content  ${activeTab === 'tab3' ? '' : 'hidden'}`}>
-                  <ProEvent/>
+                    <ProEvent />
                 </div>
                 <div id="tab4" className={`p-4 tab-content  ${activeTab === 'tab4' ? '' : 'hidden'}`}>
-                    <h2 className="text-2xl font-semibold mb-2 text-blue-700">Tab 3 Content</h2>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut
-                        perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut perspiciatis
-                        unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                    <JoinUs />
                 </div>
             </div>
         </>

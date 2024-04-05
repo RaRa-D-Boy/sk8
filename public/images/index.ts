@@ -7,3 +7,5 @@
 // export {default as SK87} from '/sk8-7.png'
 export {default as SK88} from './/sk8-5.jpg'
 export {default as SK8t} from './/sket1.gif'
+export {default as Roller} from './/blur.jpeg'
+export {default as Squad} from './/squad1.webp'

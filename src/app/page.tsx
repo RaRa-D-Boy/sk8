@@ -1,12 +1,14 @@
 "use client"
 import { Box, Container, Grid, } from '@radix-ui/themes';
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import FloatingButton from './components/floatingBtn';
 
 const Home = () => {
+  const router = useRouter();
   return (
     <main className="glass-card">
-      <Container className="mx-4 my-2 md:mx-8 lg:mx-28 vibes md:my-6 xl:mx-28 xl:my-6 poppins">
+      <Container className="mx-2 my-2 md:mx-2  vibes md:my-6 xl:mx-12 xl:my-6 poppins">
         <Grid columns={{ initial: '1', md: '2' }} className="gap-3" width="auto" align="stretch">
           <Box>
             <div className="video-container rounded-2xl">
@@ -19,11 +21,19 @@ const Home = () => {
                   <Box className="flex justify-between items-center">
                     <div>
                       <div className="poppins logo text-3xl mb-2 text-white">
-                        We Are Everywhere Chale !
+                        <p>We Are Everywhere Chale !</p>
+                        <p className='text-sm md:w-[500px]'>
+                          Welcome to the Skate Revolution!
+                          Where the streets are your canvas and every trick is a masterpiece.
+                          Unleash your inner rebel, ride with passion, and conquer the concrete.
+                          Skateboarding: The ultimate expression of freedom on four wheels.                </p>
+
+
                       </div>
                       <div>
-                        <button className="rounded-3xl poppins text-xs glass-btn backdrop-blur-xl text-white py-2 px-4">
-                          Sign up
+                        <button className="rounded-3xl poppins text-xs glass-btn backdrop-blur-xl text-white py-2 px-4"
+                          onClick={() => router.push("/know-us")}>
+                          Join us
                         </button>
                       </div>
                     </div>
@@ -42,7 +52,8 @@ const Home = () => {
                   For those new to skating, we offer semi-private and private lessons with  our certified coaches. Email us for availability and to sign up for a  session.For those new to skating, we offer semi-private and private lessons with  our certified coaches. Email us for availability and to sign up for a  session.
                 </p>
                 <div className='my-3'>
-                  <button className="rounded-3xl  text-xs glass-btn-dark  py-2 px-4 ">
+                  <button onClick={() => router.push("/know-us")}
+                    className="rounded-3xl  text-xs glass-btn-dark  py-2 px-4 ">
                     Pro Level
                   </button>
                 </div>
@@ -52,7 +63,7 @@ const Home = () => {
               </div>
             </Box>
             <Box >
-              <Grid columns={{ initial: '1', xs: '2', md: '2' , lg:'2' }} className="gap-3" width="auto" align="stretch">
+              <Grid columns={{ initial: '1', xs: '2', md: '2', lg: '2' }} className="gap-3" width="auto" align="stretch">
                 <Box className="bg-purchase  poppins rounded-2xl relative">
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-90"></div>
@@ -62,7 +73,8 @@ const Home = () => {
                       Skate shoes, helmets, boards all at affordable prices.
                     </div>
                     <div>
-                      <button className="rounded-3xl text-xs glass-btn text-white py-2 px-4 ">
+                      <button onClick={() => router.push("https://www.decathlon.com.gh/?prod_en%5Bquery%5D=skateboard")}
+                        className="rounded-3xl text-xs glass-btn text-white py-2 px-4 ">
                         Purchase Board
                       </button>
                     </div>
@@ -77,7 +89,8 @@ const Home = () => {
                       Skate shoes, helmets, boards all at affordable prices.
                     </div>
                     <div>
-                      <button className="rounded-3xl text-xs glass-btn text-white py-2 px-4 ">
+                      <button onClick={() => router.push("/know-us")}
+                        className="rounded-3xl text-xs glass-btn text-white py-2 px-4 ">
                         Join us.
                       </button>
                     </div>
@@ -103,7 +116,7 @@ const Home = () => {
               </div>
             </Box>
             <Box className=" bg-white  p-0 m-0 w-full  sm:mt-3 rounded-2xl absolute mt-3 md:relative lg:absolute lg:bottom-0  lg:z-10  lg:mt-0">
-              <Grid columns={{ initial: '1', xs: '1', sm: '2', md: '1', lg: '2', xl:'2' }} className="gap-3 p-0  md:p-4  shadow-2xl md:shadow-none mb-4 rounded-2xl bg-transparent" width="auto" align="center">
+              <Grid columns={{ initial: '1', xs: '1', sm: '2', md: '1', lg: '2', xl: '2' }} className="gap-3 p-0  md:p-4  shadow-2xl md:shadow-none mb-4 rounded-2xl bg-transparent" width="auto" align="center">
                 <Box className="ultimate rounded-2xl h-[300px]">
                 </Box>
                 <Box className="bg-white  md:p-8 lg:p-2  rounded-2xl">
@@ -112,7 +125,8 @@ const Home = () => {
                       Join us every Saturday for a fun and inclusive skating session open to  all ages and skill levels! Whether you're a beginner looking to learn  the basics or an experienced skater wanting to practice and teach, our  open skating sessions are the perfect opportunity to enjoy the sport and  connect with the community.
                     </div>
                     <div className='text-start'>
-                      <button className="rounded-3xl text-xs glass-btn-dark text-black py-2 px-4 ">
+                      <button onClick={() => router.push("/know-us")}
+                        className="rounded-3xl text-xs glass-btn-dark text-black py-2 px-4 ">
                         Learn more.
                       </button>
                     </div>
@@ -122,8 +136,9 @@ const Home = () => {
             </Box>
           </Box>
         </Grid>
-        <FloatingButton/>
+        <FloatingButton prop=">>" route="/know-us" />
       </Container>
+
     </main>
   )
 }

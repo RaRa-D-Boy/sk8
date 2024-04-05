@@ -4,8 +4,8 @@ import Image from 'next/image'
 
 export const Aboutus = () => {
     return (
-        <div className="text-black px-6 py-4 text-[15px] h-[auto] lg:h-[700px] overflow-scroll">
-            <div className="block md:hidden">
+        <div className="text-black px-6 py-4 text-[15px] h-[100vh] lg:h-[750px] overflow-scroll">
+            <div className="block lg:hidden">
                 <Image src={SK8t} alt="img" className="w-full rounded-2xl"/>
             </div>
 
