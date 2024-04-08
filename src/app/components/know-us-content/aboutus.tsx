@@ -4,7 +4,7 @@ import React from 'react'
 
 export const Aboutus = () => {
     return (
-        <div className="text-black px-6 py-4 text-[15px] h-[100vh] lg:h-[750px] lg:overflow-scroll">
+        <div className="text-black md:px-6  py-4 text-[15px] h-[100vh] lg:h-[750px] lg:overflow-scroll">
             <div className="block lg:hidden animate-fade-up animate-once  animate-delay-[800ms] animate-ease-in">
                 <Box className="aboutUsImg">
                 </Box>

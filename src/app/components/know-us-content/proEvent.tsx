@@ -3,7 +3,7 @@ import { Box } from '@radix-ui/themes';
 
 const ProEvent = () => {
     return (
-        <div className="text-black px-6 py-4 text-[15px] h-[auto] lg:h-[750px] lg:overflow-scroll">
+        <div className="text-black md:px-6  py-4 text-[15px] h-[auto] lg:h-[750px] lg:overflow-scroll">
             <div className="block lg:hidden animate-fade-up animate-once  animate-delay-[800ms] animate-ease-in">
                 <Box className="proEventImg">
                 </Box>            

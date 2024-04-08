@@ -10,11 +10,23 @@ import { useRouter } from 'next/navigation';
 
 export const KnowUs = () => {
     const stories = ["https://res.cloudinary.com/denu07mp4/video/upload/v1712596033/xhzkigfshahgt4xcnzmp.mp4", "https://res.cloudinary.com/denu07mp4/video/upload/v1712596394/ezabwuon83vdbgkmlknn.mp4", "https://res.cloudinary.com/denu07mp4/video/upload/v1712596562/uy8baqtc7h3jniinxyvq.mp4"]
-    const [activeTab, setActiveTab] = useState('tab1');
+    const [activeTab, setActiveTab] = useState('tab2');
     const router = useRouter();
+    const [isMobileDevice, setIsMobileDevice] = useState(false);
 
     useEffect(() => {
-        showTab('tab2');
+        if (typeof window !== 'undefined') {
+          setIsMobileDevice(window.matchMedia("only screen and (max-width: 760px)").matches);
+        }
+     }, []);
+
+    useEffect(() => {
+        if(isMobileDevice){
+            showTab('tab1');
+        } else {
+            showTab('tab2');
+        }
+        
     }, []);
 
     const showTab = (tabId: any) => {
@@ -57,19 +69,20 @@ export const KnowUs = () => {
                             </div>
                         </button>
                         <button
-                            className={`px-4 py-2 text-xs md:text-[15px] text-white font-normal xs:block md:hidden hover:bg-white hover:text-black hover:rounded-2xl focus:outline-none tab-button ${activeTab === 'tab1' ? 'active' : ''}`}
+                            className={`px-4 py-2 text-xs md:text-[15px] text-white font-normal hover:bg-white hover:text-black hover:rounded-2xl focus:outline-none tab-button ${activeTab === 'tab1' ? 'active' : ''}`}
                             onClick={() => showTab('tab1')}
                             style={activeTab === 'tab1' ? tabStyles.active : tabStyles.inactive}
                         >
-                            Stories
+                            About 
                         </button>
                         <button
-                            className={`px-4 py-2 text-xs md:text-[15px] text-white font-normal hover:bg-white hover:text-black hover:rounded-2xl focus:outline-none tab-button ${activeTab === 'tab1' ? 'active' : ''}`}
+                            className={`px-4 py-2 text-xs md:text-[15px] text-white font-normal xs:block md:hidden hover:bg-white hover:text-black hover:rounded-2xl focus:outline-none tab-button ${activeTab === 'tab2' ? 'active' : ''}`}
                             onClick={() => showTab('tab2')}
                             style={activeTab === 'tab2' ? tabStyles.active : tabStyles.inactive}
                         >
-                            About 
+                            Stories
                         </button>
+                      
                         <button
                             className={`px-4 py-2 text-xs md:text-[15px] text-white font-normal hover:bg-white hover:rounded-2xl hover:text-black focus:outline-none tab-button ${activeTab === 'tab2' ? 'active' : ''}`}
                             onClick={() => showTab('tab3')}
@@ -88,16 +101,16 @@ export const KnowUs = () => {
                 </div>
 
                 {/* Tab Content */}
-                <div id="tab1" className={`p-4 tab-content xs:block md:hidden ${activeTab === 'tab1' ? '' : 'hidden'}`}>
+                <div id="tab2" className={`p-4 tab-content xs:block md:hidden ${activeTab === 'tab2' ? '' : 'hidden'}`}>
                     <VideoStories videos={stories} />
                 </div>
-                <div id="tab2" className={`p-2 tab-content ${activeTab === 'tab2' ? '' : 'hidden'}`}>
+                <div id="tab1" className={`p-2 tab-content ${activeTab === 'tab1' ? '' : 'hidden'}`}>
                     <Aboutus />
                 </div>
-                <div id="tab3" className={`p-4 tab-content  ${activeTab === 'tab3' ? '' : 'hidden'}`}>
+                <div id="tab3" className={`px-2 py-4 md:p-4 tab-content  ${activeTab === 'tab3' ? '' : 'hidden'}`}>
                     <ProEvent />
                 </div>
-                <div id="tab4" className={`p-4 tab-content  ${activeTab === 'tab4' ? '' : 'hidden'}`}>
+                <div id="tab4" className={`px-2 py-4 md:p-4 tab-content  ${activeTab === 'tab4' ? '' : 'hidden'}`}>
                     <JoinUs />
                 </div>
             </div>
