@@ -1,167 +1,3 @@
-// // import { Box } from '@radix-ui/themes';
-// // import React, { useEffect, useRef, useState } from 'react';
-
-// // const VideoStories = ({ videos }: { videos: string[] }) => {
-// //     const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
-// //     const [videoProgress, setVideoProgress] = useState<number[]>(videos.map(() => 0));
-// //     const videoRef = useRef<HTMLVideoElement>(null);
-
-// //     useEffect(() => {
-// //         const handleProgress = () => {
-// //             const currentVideo = videoRef.current;
-// //             if (currentVideo) {
-// //                 const newProgress = (currentVideo.currentTime / currentVideo.duration) * 100;
-// //                 setVideoProgress(prevProgress => {
-// //                     const updatedProgress = [...prevProgress];
-// //                     updatedProgress[currentVideoIndex] = newProgress;
-// //                     return updatedProgress;
-// //                 });
-// //             }
-// //         };
-
-// //         const currentVideo = videoRef.current;
-// //         if (currentVideo) {
-// //             currentVideo.addEventListener('timeupdate', handleProgress);
-// //             return () => currentVideo.removeEventListener('timeupdate', handleProgress);
-// //         }
-// //     }, [videos, currentVideoIndex]);
-
-// //     useEffect(() => {
-// //         const currentVideo = videoRef.current;
-// //         console.log("what's happening", currentVideo)
-// //         if (currentVideo) {
-// //             currentVideo.src = videos[currentVideoIndex];
-// //             console.log("check this", videos[currentVideoIndex])
-// //             currentVideo.load();
-// //             // Reset progress
-// //             setVideoProgress(prevProgress => {
-// //                 const updatedProgress = [...prevProgress];
-// //                 updatedProgress[currentVideoIndex] = 0;
-// //                 return updatedProgress;
-// //             });
-// //         }
-// //     }, [currentVideoIndex, videos]);
-
-// //     const handleVideoEnd = () => {
-// //         if (videoProgress[currentVideoIndex] >= 100) {
-// //             if (currentVideoIndex < videos.length - 1) {
-// //                 setCurrentVideoIndex(prevIndex => prevIndex + 1);
-// //             } else {
-// //                 console.log('All videos have played');
-// //             }
-// //         }
-// //     };
-
-// //     return (
-// //         <main>
-// //             <Box>
-// //                 <div className="pages-video-container rounded-2xl">
-// //                     <video
-// //                         autoPlay
-// //                         loop
-// //                         muted
-// //                         className="pages-video-background"
-// //                         ref={videoRef}
-// //                         onEnded={handleVideoEnd}
-// //                     >
-// //                         <source src={videos[currentVideoIndex]} type="video/mp4" />
-// //                         Your browser does not support the video tag.
-// //                     </video>
-// //                     <div className="pages-content flex flex-col justify-between h-full ">
-// //                         <div className="absolute top-0 left-0 p-6 w-full">
-// //                             <div className="flex justify-between items-center">
-// //                                 {videos.map((_, index) => (
-// //                                     <div key={index} className="w-full bg-gray-200 rounded-full h-1 mb-4 dark:bg-gray-700">
-// //                                         <div
-// //                                             className="bg-gray-600 h-1 rounded-full dark:bg-gray-300"
-// //                                             style={{ width: `${videoProgress[index]}%` }}
-// //                                         ></div>
-// //                                     </div>
-// //                                 ))}
-
-// //                             </div>
-// //                         </div>
-// //                     </div>
-// //                 </div>
-// //             </Box>
-// //         </main>
-// //     );
-// // };
-
-// // export default VideoStories;
-
-// import { Box } from '@radix-ui/themes';
-// import React, { useEffect, useRef, useState } from 'react';
-
-// const VideoStories = ({ videos }: { videos: string[] }) => {
-//     const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
-//     const [videoProgress, setVideoProgress] = useState(0);
-//     const videoRef = useRef<HTMLVideoElement>(null);
-
-//     useEffect(() => {
-//         const handleProgress = () => {
-//             const currentVideo = videoRef.current;
-//             if (currentVideo) {
-//                 const newProgress = (currentVideo.currentTime / currentVideo.duration) * 100;
-//                 setVideoProgress(newProgress);
-//             }
-//         };
-
-//         const handleVideoEnd = () => {
-//             if (currentVideoIndex < videos.length - 1) {
-//                 setCurrentVideoIndex(prevIndex => prevIndex + 1);
-//             } else {
-//                 console.log('All videos have played');
-//             }
-//         };
-
-//         const currentVideo = videoRef.current;
-//         if (currentVideo) {
-//             currentVideo.addEventListener('timeupdate', handleProgress);
-//             currentVideo.addEventListener('ended', handleVideoEnd);
-//             currentVideo.src = videos[currentVideoIndex];
-//             currentVideo.load();
-//             currentVideo.play().catch(error => {
-//                 console.error('Auto-play failed:', error);
-//             });
-//             return () => {
-//                 currentVideo.removeEventListener('timeupdate', handleProgress);
-//                 currentVideo.removeEventListener('ended', handleVideoEnd);
-//             };
-//         }
-//     }, [currentVideoIndex, videos]);
-
-//     return (
-//         <main>
-//             <Box>
-//                 <div className="pages-video-container rounded-2xl">
-//                     <video
-//                         autoPlay
-//                         muted
-//                         className="pages-video-background"
-//                         ref={videoRef}
-//                         key={currentVideoIndex}
-//                     >
-//                         <source src={videos[currentVideoIndex]} type="video/mp4" />
-//                         Your browser does not support the video tag.
-//                     </video>
-//                     <div className="pages-content flex flex-col justify-between h-full">
-//                         <div className="absolute top-0 left-0 p-6 w-full">
-//                             <div className="w-full bg-gray-200 rounded-full h-1 mb-4 dark:bg-gray-700">
-//                                 <div
-//                                     className="bg-gray-600 h-1 rounded-full dark:bg-gray-300"
-//                                     style={{ width: `${videoProgress}%` }}
-//                                 ></div>
-//                             </div>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </Box>
-//         </main>
-//     );
-// };
-
-// export default VideoStories;
 
 import { Box } from '@radix-ui/themes';
 import React, { useEffect, useRef, useState } from 'react';
@@ -187,8 +23,8 @@ const VideoStories = ({ videos }: { videos: string[] }) => {
 
         const handleVideoEnd = () => {
             if (currentVideoIndex === videos.length - 1) {
-                setCurrentVideoIndex(0); // Reset to the first video
-                setPlaybackCompleted(true); // Mark playback as completed
+                setCurrentVideoIndex(0); 
+                setPlaybackCompleted(true); 
             } else {
                 setCurrentVideoIndex(prevIndex => prevIndex + 1);
             }
@@ -196,7 +32,7 @@ const VideoStories = ({ videos }: { videos: string[] }) => {
 
         const handleVideoStart = () => {
             if (playbackCompleted) {
-                setPlaybackCompleted(false); // Reset playback completion status
+                setPlaybackCompleted(false);
             }
         };
 
@@ -204,7 +40,7 @@ const VideoStories = ({ videos }: { videos: string[] }) => {
         if (currentVideo) {
             currentVideo.addEventListener('timeupdate', handleProgress);
             currentVideo.addEventListener('ended', handleVideoEnd);
-            currentVideo.addEventListener('play', handleVideoStart); // Listen for the video to start playing
+            currentVideo.addEventListener('play', handleVideoStart); 
             currentVideo.src = videos[currentVideoIndex];
             currentVideo.load();
             currentVideo.play().catch(error => {
@@ -213,7 +49,7 @@ const VideoStories = ({ videos }: { videos: string[] }) => {
             return () => {
                 currentVideo.removeEventListener('timeupdate', handleProgress);
                 currentVideo.removeEventListener('ended', handleVideoEnd);
-                currentVideo.removeEventListener('play', handleVideoStart); // Clean up event listener
+                currentVideo.removeEventListener('play', handleVideoStart); 
             };
         }
     }, [currentVideoIndex, videos, playbackCompleted]);
@@ -223,7 +59,7 @@ const VideoStories = ({ videos }: { videos: string[] }) => {
     return (
         <main>
             <Box>
-                <div className="pages-video-container xl:rounded-2xl shadow-2xl h-screen">
+                <div className="pages-video-container animate-fade-up animate-once  animate-ease-in  xl:rounded-2xl shadow-2xl h-[90vh]">
                     <video
                         autoPlay
                         muted

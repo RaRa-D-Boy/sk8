@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useRouter } from 'next/navigation';
 const FloatingButton = ({ prop,route }: any) => {
-  // const btnText = prop.text
   const router = useRouter();
   return (
     <div className="fixed bottom-6 right-6 z-10 absolute">

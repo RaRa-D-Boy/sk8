@@ -3,11 +3,15 @@ import { Aboutus } from './aboutus';
 import VideoStories from '../stories';
 import ProEvent from './proEvent';
 import JoinUs from './joinus';
+import { LuArrowUpLeft } from "react-icons/lu";
+import { useRouter } from 'next/navigation';
+
 
 
 export const KnowUs = () => {
     const stories = ["/home-vid3.mp4", "/home-vid2.mp4", "/home-vid3.mp4"]
     const [activeTab, setActiveTab] = useState('tab1');
+    const router = useRouter();
 
     useEffect(() => {
         showTab('tab2');
@@ -19,29 +23,22 @@ export const KnowUs = () => {
 
     const tabStyles = {
         active: {
-            // background: "black",
-            // border: "none",
-            // color: "white",
-
-            // textDecoration: "none",
-            // cursor: "pointer",
-            // borderRadius: "13px",
-            // backdropFilter: "blur(5px)",
-            // transition: "background 0.3s ease",
-            background: "rgba(29, 29, 29, 0.182)",
+            background: "rgba(29, 29, 29, 0.152)",
             border: "none",
             color: "white",
             textDecoration: "none",
+            fontWeight:"bold",
             cursor: "pointer",
             borderRadius: "13px",
             backdropFilter: "blur(10px)",
             transition: "background 0.3s ease",
-            boxShadow: "5px 5px 7px rgba(0, 0, 0, 0.164)"
+            boxShadow: "5px 5px 7px rgba(0, 0, 0, 0.104)"
         },
         inactive: {
             backgroundColor: 'transparent',
             border: 'none',
             color: 'black',
+            
         },
     };
     return (
@@ -49,34 +46,43 @@ export const KnowUs = () => {
             <div className="w-full  text-black">
                 {/* Tab Buttons */}
                 <div className="bg-white  p-4 xl:rounded-2xl  ">
-                    <div className="flex justify-start space-x-4 ">
+                    <div className="flex justify-start space-x-4 animate-fade animate-once  animate-ease-in ">
                         <button
-                            className={`px-4 py-2 text-white font-normal xs:block md:hidden hover:bg-white hover:text-black hover:rounded-2xl focus:outline-none tab-button ${activeTab === 'tab1' ? 'active' : ''}`}
+                            className={` px-2  md:px-6 md:py-2 text-xs md:text-[15px]  hover:bg-black hover:text-white rounded-2xl font-normal text-black border border-black focus:outline-none `}
+                            onClick={() => router.push("/")}
+                        >
+                            <div className="flex items-center"> {/* Use flexbox to align items horizontally */}
+                                <LuArrowUpLeft className="mr-0 md:mr-2 font-semibold" /> {/* Add margin to separate the icon from the text */}
+                                <span className="hidden md:block">Back</span>
+                            </div>
+                        </button>
+                        <button
+                            className={`px-4 py-2 text-xs md:text-[15px] text-white font-normal xs:block md:hidden hover:bg-white hover:text-black hover:rounded-2xl focus:outline-none tab-button ${activeTab === 'tab1' ? 'active' : ''}`}
                             onClick={() => showTab('tab1')}
                             style={activeTab === 'tab1' ? tabStyles.active : tabStyles.inactive}
                         >
                             Stories
                         </button>
                         <button
-                            className={`px-4 py-2 text-white font-normal hover:bg-white hover:text-black hover:rounded-2xl focus:outline-none tab-button ${activeTab === 'tab1' ? 'active' : ''}`}
+                            className={`px-4 py-2 text-xs md:text-[15px] text-white font-normal hover:bg-white hover:text-black hover:rounded-2xl focus:outline-none tab-button ${activeTab === 'tab1' ? 'active' : ''}`}
                             onClick={() => showTab('tab2')}
                             style={activeTab === 'tab2' ? tabStyles.active : tabStyles.inactive}
                         >
-                            About Us
+                            About 
                         </button>
                         <button
-                            className={`px-4 py-2 text-white font-normal hover:bg-white hover:rounded-2xl hover:text-black focus:outline-none tab-button ${activeTab === 'tab2' ? 'active' : ''}`}
+                            className={`px-4 py-2 text-xs md:text-[15px] text-white font-normal hover:bg-white hover:rounded-2xl hover:text-black focus:outline-none tab-button ${activeTab === 'tab2' ? 'active' : ''}`}
                             onClick={() => showTab('tab3')}
                             style={activeTab === 'tab3' ? tabStyles.active : tabStyles.inactive}
                         >
-                            Pro Events
+                            Events
                         </button>
                         <button
-                            className={`px-4 py-2 text-white font-normal hover:bg-white  hover:rounded-2xl hover:text-black focus:outline-none tab-button ${activeTab === 'tab3' ? 'active' : ''}`}
+                            className={`px-4 py-2 text-xs md:text-[15px] text-white font-normal hover:bg-white  hover:rounded-2xl hover:text-black focus:outline-none tab-button ${activeTab === 'tab3' ? 'active' : ''}`}
                             onClick={() => showTab('tab4')}
                             style={activeTab === 'tab4' ? tabStyles.active : tabStyles.inactive}
                         >
-                            Join Us
+                            Join
                         </button>
                     </div>
                 </div>
