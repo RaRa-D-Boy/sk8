@@ -1,12 +1,13 @@
+import { Box } from '@radix-ui/themes'
 import React from 'react'
-import { SK8t } from '../../../../public/images'
-import Image from 'next/image'
+
 
 export const Aboutus = () => {
     return (
-        <div className="text-black px-6 py-4 text-[15px] h-[100vh] lg:h-[750px] overflow-scroll">
+        <div className="text-black px-6 py-4 text-[15px] h-[100vh] lg:h-[750px] lg:overflow-scroll">
             <div className="block lg:hidden animate-fade-up animate-once  animate-delay-[800ms] animate-ease-in">
-                <Image src={SK8t} alt="img" className="w-full rounded-2xl"/>
+                <Box className="aboutUsImg">
+                </Box>
             </div>
 
             <p className="p-3 animate-fade-up animate-once  animate-delay-[1000ms] animate-ease-in">

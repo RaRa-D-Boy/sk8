@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation';
 
 
 export const KnowUs = () => {
-    const stories = ["/home-vid3.mp4", "/home-vid2.mp4", "/home-vid3.mp4"]
+    const stories = ["https://res.cloudinary.com/denu07mp4/video/upload/v1712596033/xhzkigfshahgt4xcnzmp.mp4", "https://res.cloudinary.com/denu07mp4/video/upload/v1712596394/ezabwuon83vdbgkmlknn.mp4", "https://res.cloudinary.com/denu07mp4/video/upload/v1712596562/uy8baqtc7h3jniinxyvq.mp4"]
     const [activeTab, setActiveTab] = useState('tab1');
     const router = useRouter();
 
@@ -23,11 +23,11 @@ export const KnowUs = () => {
 
     const tabStyles = {
         active: {
-            background: "rgba(29, 29, 29, 0.152)",
+            background: "black",
             border: "none",
             color: "white",
             textDecoration: "none",
-            fontWeight:"bold",
+            // fontWeight:"bold",
             cursor: "pointer",
             borderRadius: "13px",
             backdropFilter: "blur(10px)",

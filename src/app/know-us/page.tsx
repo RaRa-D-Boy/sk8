@@ -5,7 +5,7 @@ import VideoStories from '../components/stories';
 import { KnowUs } from '../components/know-us-content';
 
 const About = () => {
-  const stories = ["/home-vid3.mp4", "/home-vid2.mp4", "/home-vid3.mp4"]
+  const stories = ["https://res.cloudinary.com/denu07mp4/video/upload/v1712596033/xhzkigfshahgt4xcnzmp.mp4", "https://res.cloudinary.com/denu07mp4/video/upload/v1712596394/ezabwuon83vdbgkmlknn.mp4", "https://res.cloudinary.com/denu07mp4/video/upload/v1712596562/uy8baqtc7h3jniinxyvq.mp4"]
 
   return (
     <main className="h-auto ">

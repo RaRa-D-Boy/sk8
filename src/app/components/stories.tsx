@@ -66,6 +66,7 @@ const VideoStories = ({ videos }: { videos: string[] }) => {
                         className="pages-video-background"
                         ref={videoRef}
                         key={currentVideoIndex}
+                        playsInline 
                     >
                         <source src={videos[currentVideoIndex]} type="video/mp4" />
                         Your browser does not support the video tag.

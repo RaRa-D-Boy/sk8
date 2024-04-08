@@ -106,7 +106,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../../public/buy.png");
+  background-image: url("https://i.postimg.cc/28mbB9CM/buy.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -132,7 +132,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../../public/buy1.jpg");
+  background-image: url("https://i.postimg.cc/3r20NQQ2/buy1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -150,13 +150,11 @@ body {
 
 
 .bg-card2 {
-  background-image: url("../../public/sk8.gif");
+  background-image: url("https://i.postimg.cc/YSGgr4xx/sk8.gif");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-
-
 }
 
 .bg-sataday1 {
@@ -191,6 +189,43 @@ body {
   box-shadow: 5px 5px 7px rgba(85, 83, 83, 0.164);  
 }
  
+.joinUsImg{
+  background-image: url("https://i.postimg.cc/R07PSbdd/blur.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height:500px;
+  position: relative;
+  border-radius: 13px;
+  content: "";
+}
+
+.proEventImg{
+  background-image: url("https://i.postimg.cc/6QqLmrpW/sk8-5.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height:500px;
+  position: relative;
+  border-radius: 13px;
+  content: "";
+}
+
+.aboutUsImg{
+  background-image: url("https://i.postimg.cc/PJ05dkmV/sk8-1.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height:500px;
+  position: relative;
+  border-radius: 13px;
+  content: "";
+}
+
+
 .glass-btn-dark {
   background: rgba(99, 99, 99, 0.158);
   border: none;
@@ -233,7 +268,7 @@ body {
   width: 100%;
   /* height: 100%; */
   overflow: hidden;
-  background-image: url("../../public/sk8-8.png");
+  background-image: url("https://i.postimg.cc/Rh1WDKLg/sk8-8.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; 

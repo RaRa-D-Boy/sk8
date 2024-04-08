@@ -23,8 +23,8 @@ const Home = () => {
         <Grid columns={{ initial: '1', md: '2' }} className="gap-3" width="auto" align="stretch">
           <Box>
             <div className="video-container rounded-2xl animate-fade animate-once  animate-delay-[800ms] animate-ease-in">
-              <video autoPlay loop muted className="video-background">
-                <source src="/home-vid4.mp4" type="video/mp4" />
+              <video autoPlay loop muted playsInline className="video-background">
+                <source src="https://res.cloudinary.com/denu07mp4/video/upload/v1712596999/home-vid4_bpjroq.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               <div className="content flex flex-col justify-between  h-full ">
