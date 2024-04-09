@@ -30,7 +30,7 @@ const Home = () => {
   return (
     <main className="">
       <Container className="mx-2 my-2 md:mx-2   vibes md:my-6 xl:mx-12 xl:my-6 poppins">
-        <Box className="bg-banner h-[50em]  animate-fade animate-once  my-3 animate-delay-[1400ms] animate-ease-in rounded-2xl relative">
+        <Box className="bg-banner h-[35em] md:h-[50em]  animate-fade animate-once  my-3 animate-delay-[1400ms] animate-ease-in rounded-2xl relative">
           {/* Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-90"></div>
 
