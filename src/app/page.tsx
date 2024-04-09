@@ -1,6 +1,6 @@
 "use client"
 import { Box, Container, Grid, } from '@radix-ui/themes';
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { LuArrowUpRight } from "react-icons/lu";
 
@@ -8,7 +8,17 @@ const Home = () => {
   const router = useRouter();
 
   const [isHovered, setIsHovered] = useState(false);
+  const videoRef = useRef(null);
 
+  useEffect(() => {
+     const video:any = videoRef.current;
+     if (video) {
+       video.play().catch((error:any) => {
+         console.error('Auto-play failed:', error);
+       });
+     }
+  }, []);
+  
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
@@ -23,7 +33,7 @@ const Home = () => {
         <Grid columns={{ initial: '1', md: '2' }} className="gap-3" width="auto" align="stretch">
           <Box>
             <div className="video-container rounded-2xl animate-fade animate-once  animate-delay-[800ms] animate-ease-in">
-              <video autoPlay loop muted playsInline className="video-background">
+              <video id="myVideo" autoPlay loop muted playsInline ref={videoRef} className="video-background">
                 <source src="https://res.cloudinary.com/denu07mp4/video/upload/v1712596999/home-vid4_bpjroq.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
@@ -31,7 +41,7 @@ const Home = () => {
                 <button onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                   onClick={() => router.push("/know-us")}
-                  className="logo absolute shadow-2xl animate-bounce text-center top-0 right-0 my-6 mx-2 poppins logo text-3xl bg-white rounded-full text-black w-[80px] h-[80px]">
+                  className="logo absolute shadow-2xl animate-bounce text-center top-0 right-0 my-6 mx-2 poppins logo text-xl bg-white rounded-2xl text-black w-[60px] h-[60px]">
                 {isHovered ? (<LuArrowUpRight className="text-center mx-6"/>) : ("sk8")}  
                 </button>
 

@@ -9,24 +9,13 @@ import { useRouter } from 'next/navigation';
 
 
 export const KnowUs = () => {
-    const stories = ["https://res.cloudinary.com/denu07mp4/video/upload/v1712596033/xhzkigfshahgt4xcnzmp.mp4", "https://res.cloudinary.com/denu07mp4/video/upload/v1712596394/ezabwuon83vdbgkmlknn.mp4", "https://res.cloudinary.com/denu07mp4/video/upload/v1712596562/uy8baqtc7h3jniinxyvq.mp4"]
-    const [activeTab, setActiveTab] = useState('tab2');
+    const stories = ["https://res.cloudinary.com/denu07mp4/video/upload/v1712596033/xhzkigfshahgt4xcnzmp.mp4", "https://res.cloudinary.com/denu07mp4/video/upload/v1712596394/ezabwuon83vdbgkmlknn.mp4", "https://res.cloudinary.com/denu07mp4/video/upload/v1712596562/uy8baqtc7h3jniinxyvq.mp4","https://res.cloudinary.com/denu07mp4/video/upload/v1712658011/obnmvy6hyt6gotteyajr.mp4"]
+    const [activeTab, setActiveTab] = useState('tab1');
     const router = useRouter();
-    const [isMobileDevice, setIsMobileDevice] = useState(false);
+  
 
     useEffect(() => {
-        if (typeof window !== 'undefined') {
-          setIsMobileDevice(window.matchMedia("only screen and (max-width: 760px)").matches);
-        }
-     }, []);
-
-    useEffect(() => {
-        if(isMobileDevice){
             showTab('tab1');
-        } else {
-            showTab('tab2');
-        }
-        
     }, []);
 
     const showTab = (tabId: any) => {
@@ -101,12 +90,14 @@ export const KnowUs = () => {
                 </div>
 
                 {/* Tab Content */}
-                <div id="tab2" className={`p-4 tab-content xs:block md:hidden ${activeTab === 'tab2' ? '' : 'hidden'}`}>
-                    <VideoStories videos={stories} />
-                </div>
-                <div id="tab1" className={`p-2 tab-content ${activeTab === 'tab1' ? '' : 'hidden'}`}>
+                 <div id="tab1" className={`p-2 tab-content ${activeTab === 'tab1' ? '' : 'hidden'}`}>
                     <Aboutus />
                 </div>
+
+                <div id="tab2" className={`p-0 md:p-4 tab-content xs:block md:hidden ${activeTab === 'tab2' ? '' : 'hidden'}`}>
+                    <VideoStories videos={stories} />
+                </div>
+               
                 <div id="tab3" className={`px-2 py-4 md:p-4 tab-content  ${activeTab === 'tab3' ? '' : 'hidden'}`}>
                     <ProEvent />
                 </div>
