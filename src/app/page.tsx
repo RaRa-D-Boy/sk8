@@ -3,6 +3,8 @@ import { Box, Container, Grid, } from '@radix-ui/themes';
 import React, { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { LuArrowUpRight } from "react-icons/lu";
+import { EventCalender } from './components/eventCalender';
+
 
 const Home = () => {
   const router = useRouter();
@@ -28,8 +30,8 @@ const Home = () => {
   };
 
   return (
-    <main className="">
-      <Container className="mx-2 my-2 md:mx-2   vibes md:my-6 xl:mx-12 xl:my-6 poppins">
+    <main className="h-[300px]">
+      <Container className="mx-2 my-2 md:mx-2    md:my-6 xl:mx-12 xl:my-6 poppins">
         <Box className="bg-banner h-[35em] md:h-[50em]  animate-fade animate-once  my-3 animate-delay-[1400ms] animate-ease-in rounded-2xl relative">
           {/* Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-90"></div>
@@ -121,6 +123,7 @@ const Home = () => {
               </div>
             </Box>
             <Box >
+
               <Grid columns={{ initial: '1', xs: '2', md: '2', lg: '2' }} className="gap-3" width="auto" align="stretch">
                 <Box className="bg-purchase animate-fade animate-once  animate-delay-[1200ms] animate-ease-in poppins rounded-2xl relative">
                   {/* Overlay */}
@@ -173,18 +176,17 @@ const Home = () => {
                 </div>
               </div>
             </Box>
-            <Box className=" bg-white p-0 m-0 w-full  sm:mt-3 rounded-2xl absolute mt-3 md:relative lg:absolute lg:bottom-0  lg:z-10  lg:mt-0">
-              <Grid columns={{ initial: '1', xs: '1', sm: '2', md: '1', lg: '2', xl: '2' }} className="gap-3 p-0  md:p-4  shadow-2xl md:shadow-none mb-4 rounded-2xl bg-transparent" width="auto" align="center">
-                <Box className="ultimate  animate-fade-up animate-once  animate-delay-[1700ms] rounded-2xl h-[300px]">
+            <Box className=" bg-white p-0 m-0 w-full sm:mt-3 rounded-2xl  mt-3 relative lg:absolute lg:bottom-0 z-0 lg:z-10 lg:mt-0">
+              <Grid columns={{ initial: '1', xs: '1', sm: '2', md: '1', lg: '2', xl: '2' }} className="gap-3 p-0 md:p-4 md:shadow-none mb-4 rounded-2xl bg-transparent" width="auto" align="center">
+                <Box className="ultimate  animate-fade-up animate-once animate-delay-[1700ms] rounded-2xl h-[300px]">
                 </Box>
-                <Box className="bg-white  md:p-8 lg:p-2  rounded-2xl">
-                  <Box className="bg-white  p-2 rounded-2xl">
-                    <div className='text-black text-[12px] p-3  animate-fade-up animate-once  animate-delay-[1800ms]'>
-                      Join us every Saturday for a fun and inclusive skating session open to  all ages and skill levels! Whether you're a beginner looking to learn  the basics or an experienced skater wanting to practice and teach, our  open skating sessions are the perfect opportunity to enjoy the sport and  connect with the community.
+                <Box className="bg-white md:p-8 lg:p-2 rounded-2xl">
+                  <Box className="bg-white p-2 rounded-2xl">
+                    <div className='text-black text-[12px] p-3 animate-fade-up animate-once animate-delay-[1800ms]'>
+                      Join us every Saturday for a fun and inclusive skating session open to all ages and skill levels! Whether you're a beginner looking to learn the basics or an experienced skater wanting to practice and teach, our open skating sessions are the perfect opportunity to enjoy the sport and connect with the community.
                     </div>
                     <div className='text-start'>
-                      <button onClick={() => router.push("/know-us")}
-                        className="rounded-3xl text-xs glass-btn-dark text-black py-2 px-4 ">
+                      <button onClick={() => router.push("/know-us")} className="rounded-3xl text-xs glass-btn-dark text-black py-2 px-4 ">
                         Learn more.
                       </button>
                     </div>
@@ -195,8 +197,14 @@ const Home = () => {
           </Box>
         </Grid>
 
+        <Grid columns={{ initial: '1', md: '2' }} className="gap-3 my-3" width="auto" align="stretch">
+          <Box className='bg-white rounded-2xl p-4 shadow-2xl'>
+            <EventCalender />
+          </Box>
+        </Grid>
 
       </Container>
+
 
     </main>
   )

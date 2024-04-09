@@ -30,7 +30,7 @@ body {
   background:white;
   font-family: "Poppins",sans-serif;
   font-style: normal;
-
+  height:auto;
 
 }
 
@@ -378,3 +378,4 @@ height:100%;
   background-repeat: no-repeat;
   background-position: center; 
 }
+
