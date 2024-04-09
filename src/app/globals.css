@@ -144,6 +144,32 @@ body {
   transform: scale(1.1); /* Scale the image out on hover */
  }
 
+ .bg-banner {
+  position: relative;
+  width: 100%;
+
+  overflow: hidden; /* Ensure the pseudo-element is clipped to the card's bounds */
+ }  
+
+ .bg-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../public/squad.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.5s ease; /* Smooth transition for the hover effect */
+  z-index: -1; /* Ensure the image is behind the content */
+ }
+ 
+ .bg-learn:hover::before {
+  transform: scale(1.1); /* Scale the image out on hover */
+ }
+
  
 
  

@@ -11,14 +11,14 @@ const Home = () => {
   const videoRef = useRef(null);
 
   useEffect(() => {
-     const video:any = videoRef.current;
-     if (video) {
-       video.play().catch((error:any) => {
-         console.error('Auto-play failed:', error);
-       });
-     }
+    const video: any = videoRef.current;
+    if (video) {
+      video.play().catch((error: any) => {
+        console.error('Auto-play failed:', error);
+      });
+    }
   }, []);
-  
+
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
@@ -30,20 +30,52 @@ const Home = () => {
   return (
     <main className="">
       <Container className="mx-2 my-2 md:mx-2   vibes md:my-6 xl:mx-12 xl:my-6 poppins">
+        <Box className="bg-banner h-[50em]  animate-fade animate-once  my-3 animate-delay-[1400ms] animate-ease-in rounded-2xl relative">
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-90"></div>
+
+          <button onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            onClick={() => router.push("/know-us")}
+            className="logo absolute shadow-2xl animate-bounce text-center top-0 right-0 my-6 mx-2 poppins logo text-xl bg-white rounded-2xl text-black w-[60px] h-[60px]">
+            {isHovered ? (<LuArrowUpRight className="text-center mx-6" />) : ("sk8")}
+          </button>
+          <div className="absolute bottom-0 p-6 z-10 mb-8" > {/* Adjusted z-index */}
+
+            <div className="text-white font-light  animate-fade-up animate-once  animate-delay-[1500ms] text-xl sm:text-4xl md:text-5xl lg:text-6xl my-3">
+              <div className=''>Feel the <span className="">vibe</span>, own the <span className="">ride</span>,</div>
+              <div>
+                <span className="">risk everything,</span>  <span className='line-through text-purple-500'>fear nothing </span>,
+              </div>
+              <div>
+                <span className="">live</span> with no regrets, <span className=' font-bold text-yellow-400'>defy gravity.</span>
+              </div>
+              {/* <div className="my-8">
+                <span className="">FLY!</span>
+              </div> */}
+            </div>
+            <div>
+              {/* <button onClick={() => router.push("/know-us")}
+                        className="rounded-3xl  animate-fade-up animate-once  animate-delay-[1600ms] text-xs glass-btn text-white py-2 px-4 ">
+                        Join us.
+                      </button> */}
+            </div>
+          </div>
+        </Box>
         <Grid columns={{ initial: '1', md: '2' }} className="gap-3" width="auto" align="stretch">
           <Box>
             <div className="video-container rounded-2xl animate-fade animate-once  animate-delay-[800ms] animate-ease-in">
-              <video id="myVideo" autoPlay loop  playsInline ref={videoRef} className="video-background">
+              <video id="myVideo" autoPlay loop playsInline ref={videoRef} className="video-background">
                 <source src="https://res.cloudinary.com/denu07mp4/video/upload/v1712596999/home-vid4_bpjroq.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               <div className="content flex flex-col justify-between  h-full ">
-                <button onMouseEnter={handleMouseEnter}
+                {/* <button onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                   onClick={() => router.push("/know-us")}
                   className="logo absolute shadow-2xl animate-bounce text-center top-0 right-0 my-6 mx-2 poppins logo text-xl bg-white rounded-2xl text-black w-[60px] h-[60px]">
-                {isHovered ? (<LuArrowUpRight className="text-center mx-6"/>) : ("sk8")}  
-                </button>
+                  {isHovered ? (<LuArrowUpRight className="text-center mx-6" />) : ("sk8")}
+                </button> */}
 
                 <div className=" absolute bottom-0 left-0 p-6 w-full">
                   <Box className="flex justify-between items-center">
@@ -162,7 +194,8 @@ const Home = () => {
             </Box>
           </Box>
         </Grid>
-        {/* <FloatingButton prop=">>" route="/know-us" /> */}
+
+
       </Container>
 
     </main>
