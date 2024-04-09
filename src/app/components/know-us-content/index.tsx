@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation';
 
 
 export const KnowUs = () => {
-    const stories = ["https://res.cloudinary.com/denu07mp4/video/upload/v1712596033/xhzkigfshahgt4xcnzmp.mp4", "https://res.cloudinary.com/denu07mp4/video/upload/v1712596394/ezabwuon83vdbgkmlknn.mp4", "https://res.cloudinary.com/denu07mp4/video/upload/v1712596562/uy8baqtc7h3jniinxyvq.mp4","https://res.cloudinary.com/denu07mp4/video/upload/v1712658011/obnmvy6hyt6gotteyajr.mp4"]
+    const stories = ["https://res.cloudinary.com/denu07mp4/video/upload/v1712596033/xhzkigfshahgt4xcnzmp.mp4", "https://res.cloudinary.com/denu07mp4/video/upload/v1712596394/ezabwuon83vdbgkmlknn.mp4", "https://res.cloudinary.com/denu07mp4/video/upload/v1712658011/obnmvy6hyt6gotteyajr.mp4"]
     const [activeTab, setActiveTab] = useState('tab1');
     const router = useRouter();
   
