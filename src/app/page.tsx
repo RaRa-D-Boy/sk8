@@ -3,7 +3,7 @@ import { Box, Container, Grid, } from '@radix-ui/themes';
 import React, { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { LuArrowUpRight } from "react-icons/lu";
-import { EventCalender } from './components/eventCalender';
+// import { EventCalender } from './components/eventCalender';
 
 
 const Home = () => {
@@ -197,11 +197,11 @@ const Home = () => {
           </Box>
         </Grid>
 
-        <Grid columns={{ initial: '1', md: '2' }} className="gap-3 my-3" width="auto" align="stretch">
+        {/* <Grid columns={{ initial: '1', md: '2' }} className="gap-3 my-3" width="auto" align="stretch">
           <Box className='bg-white rounded-2xl p-4 shadow-2xl'>
             <EventCalender />
           </Box>
-        </Grid>
+        </Grid> */}
 
       </Container>
 
